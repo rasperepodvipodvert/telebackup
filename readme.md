@@ -23,4 +23,4 @@ user_name = '@ifilatov'
 ## TODO
 
 - Split large files
-- comandline args
+- ~~comandline args~~
