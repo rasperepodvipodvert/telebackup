@@ -16,6 +16,12 @@ session_name = 'bkp_bot'
 user_name = '@ifilatov'
 ```
 
+## How to use
+
+```shell
+python3 main.py -u "@ifilatov" -f "./readme.md"
+```
+
 ## Fetches
 
 - Upload more than 50mb 
