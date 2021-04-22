@@ -5,15 +5,18 @@
 ## Install
 
 ```shell
-git clone 
+git clone https://github.com/rasperepodvipodvert/telebackup.git
+cd telebackup
 ```
+Create `config.py` and past your data from: https://my.telegram.org/apps
 
-config.py
 ```ini
 api_id = '5195065'
 api_hash = 'f933114319f9a650f669e91ccf995165'
-session_name = 'bkp_bot'
-user_name = '@ifilatov'
+
+session_name = 'bkp_bot' # custom id for you
+user_name = '@ifilatov'  # who resive your backup
+file_path = 'readme.md'  # path to backup file
 ```
 
 ## How to use
