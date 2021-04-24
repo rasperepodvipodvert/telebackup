@@ -1,6 +1,10 @@
-# TeleBackup
-
-> This is backup bot for you SERVER/PC
+████████╗███████╗██╗     ███████╗██████╗  █████╗  ██████╗██╗  ██╗██╗   ██╗██████╗ 
+╚══██╔══╝██╔════╝██║     ██╔════╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██║   ██║██╔══██╗
+   ██║   █████╗  ██║     █████╗  ██████╔╝███████║██║     █████╔╝ ██║   ██║██████╔╝
+   ██║   ██╔══╝  ██║     ██╔══╝  ██╔══██╗██╔══██║██║     ██╔═██╗ ██║   ██║██╔═══╝ 
+   ██║   ███████╗███████╗███████╗██████╔╝██║  ██║╚██████╗██║  ██╗╚██████╔╝██║     
+   ╚═╝   ╚══════╝╚══════╝╚══════╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     
+> Backup to telegram your sites archive
 
 ## Install
 
@@ -8,6 +12,7 @@
 git clone https://github.com/rasperepodvipodvert/telebackup.git
 cd telebackup
 ```
+
 Create `config.py` and past your data from: https://my.telegram.org/apps
 
 ```ini
@@ -17,6 +22,16 @@ api_hash = 'f933114319f9a650f669e91ccf995165'
 session_name = 'bkp_bot' # custom id for you
 user_name = '@ifilatov'  # who resive your backup
 file_path = 'readme.md'  # path to backup file
+```
+
+Create venv
+
+```shell
+apt install python3-venv        # if need
+python3 -m venv venv
+venv\Scripts\activate           # windows
+source venv/bin/activate        # linux
+pip install -r requirements.txt
 ```
 
 ## How to use
