@@ -1,5 +1,5 @@
 ![](assets/logo.png)
-Backup to telegram your sites archive
+>Backup to telegram your sites archive
 
 ## Install
 
