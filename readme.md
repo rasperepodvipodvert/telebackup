@@ -14,9 +14,10 @@ Create `config.py` and past your data from: https://my.telegram.org/apps
 api_id = '5195065'
 api_hash = 'f933114319f9a650f669e91ccf995165'
 
-session_name = 'bkp_bot' # custom id for you
-user_name = '@ifilatov'  # who resive your backup
-file_path = 'readme.md'  # path to backup file
+session_name = 'bkp_bot'    # custom id for you
+user_name = 'me'            # who resive your backup
+file_path = 'readme.md'     # path to backup file
+caption = ''                # caption for file
 ```
 
 Create venv
@@ -37,7 +38,7 @@ python3 main.py -u "@ifilatov" -f "./readme.md"
 
 ## Fetches
 
-- Upload more than 50mb 
+- Upload more than 50mb
 
 ## TODO
 
