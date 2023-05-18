@@ -1,4 +1,7 @@
 from telethon import TelegramClient, events, sync
+from telethon.tl.types import DocumentAttributeVideo
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
 import argparse
 import config
 
@@ -29,7 +32,14 @@ elif config.peer.startswith('-'):
 
 # send video file to telegramm channel
 with open(config.file_path, 'rb') as f:
-    client.send_file(chat, f, caption=config.caption)
+    if f.name.endswith('.mp4'):
+        attr = DocumentAttributeVideo(duration=extractMetadata(createParser(f.name)).get('duration').seconds,
+                                       w=extractMetadata(createParser(f.name)).get('width'),
+                                       h=extractMetadata(createParser(f.name)).get('height'),
+                                       supports_streaming=True)
+        client.send_file(chat, f, attributes=[attr], caption=config.caption)
+    else:
+        client.send_file(chat, f, caption=config.caption)
 
 # close program
 client.disconnect()
