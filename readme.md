@@ -8,16 +8,11 @@ git clone https://github.com/rasperepodvipodvert/telebackup.git
 cd telebackup
 ```
 
-Create `config.py` and past your data from: https://my.telegram.org/apps
+Create `.env` and past your data from: https://my.telegram.org/apps
 
 ```ini
-api_id = '5195065'
-api_hash = 'f933114319f9a650f669e91ccf995165'
-
-session_name = 'bkp_bot'    # custom id for you
-user_name = 'me'            # who resive your backup
-file_path = 'readme.md'     # path to backup file
-caption = ''                # caption for file
+API_ID = '5195065'
+API_HASH = 'f933114319f9a650f669e91ccf995165'
 ```
 
 Create venv
@@ -33,7 +28,7 @@ pip install -r requirements.txt
 ## How to use
 
 ```shell
-python3 main.py -u "@ifilatov" -f "./readme.md"
+python3 app.py -u "@ifilatov" -f "./readme.md"
 ```
 
 ## Fetches

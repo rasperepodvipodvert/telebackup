@@ -4,6 +4,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 import argparse
 import config
+import os
 
 parser = argparse.ArgumentParser(description='Telegram backup bot')
 parser.add_argument('-u', '--peer', help='Example: @ifilatov or channel name')
@@ -18,9 +19,13 @@ if args.file_path:
 if args.caption:
     config.caption = args.caption
 
-api_id = config.api_id
-api_hash = config.api_hash
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
 chat = None
+
+if api_id is None or api_hash is None:
+    print('API_ID and API_HASH not found')
+    exit(1)
 
 client = TelegramClient(config.session_name, api_id, api_hash)
 client.start()

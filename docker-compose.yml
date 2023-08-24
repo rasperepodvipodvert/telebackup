@@ -1,0 +1,9 @@
+version: '3'
+services:
+  telebackup:
+    container_name: telebackup
+    build:
+      context: .
+    env_file:
+      - .env
+    command: python3 app.py -u "@ifilatov" -f "./readme.md"
